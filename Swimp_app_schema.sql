@@ -96,7 +96,7 @@ create table attendance_students (
     student_id int not null,
     status enum('present', 'absent', 'late', 'excused') default 'absent',
     arrival_time datetime,
-    departure_time datatime,
+    departure_time datetime,
     reason text,
     foreign key ( attendance_id ) references attendance(id) on delete cascade,
     foreign key ( student_id ) references students(id) on delete cascade,
